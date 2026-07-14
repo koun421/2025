@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เกมคลิกเก็บคะแนน</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.game{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#333;
+}
+
+#score{
+    font-size:40px;
+    color:#ff5722;
+}
+
+button{
+    padding:20px 40px;
+    font-size:24px;
+    border:none;
+    border-radius:15px;
+    background:#4CAF50;
+    color:white;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#45a049;
+}
+</style>
+
+</head>
+<body>
+
+<div class="game">
+    <h1>🎮 เกมคลิกเก็บคะแนน</h1>
+    <h2>คะแนน</h2>
+    <div id="score">0</div>
+    <br>
+    <button onclick="clickGame()">คลิก!</button>
+</div>
+
+<script>
+let score = 0;
+
+function clickGame(){
+    score++;
+    document.getElementById("score").innerHTML = score;
+
+    if(score == 10){
+        alert("🎉 เก่งมาก! ได้ 10 คะแนน");
+    }
+
+    if(score == 50){
+        alert("🏆 คุณชนะแล้ว!");
+    }
+}
+</script>
+
+</body>
+</html>
